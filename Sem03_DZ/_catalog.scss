@@ -1,0 +1,40 @@
+@import 'vars';
+@import 'mixins';
+@import 'tophead';
+
+.pages-nav {
+    padding-top: 48px;
+
+    &__box {
+        width: 283px;
+        padding-right: 32px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    &__content {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        min-height: 19px;
+        border: 1px solid #EBEBEB;
+        @include centerFlex;
+        gap: 16px;
+    }
+
+    &__text {
+        color: #C4C4C4;
+        font-size: 16px;
+        @extend %styleText;
+        font-weight: 300;
+        letter-spacing: 5px;
+    }
+
+    &__text-designer {
+        color: $colorCatalogDesign;
+    }
+
+    &__link:hover path {
+        fill: $colorCatalogDesign;
+    }
+}
