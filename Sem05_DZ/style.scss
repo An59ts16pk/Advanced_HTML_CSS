@@ -1,0 +1,165 @@
+@import 'vars';
+@import 'mixins';
+@import 'header_and_footer';
+@import 'filter_and_sort';
+@import 'breadcrumbs';
+@import 'tophead';
+@import 'index';
+@import 'allproducts';
+@import 'cart';
+@import 'product';
+@import 'catalog';
+@import 'registration';
+
+html {
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.center {
+    padding-left: calc(50% - $screenWidth / 2);
+    padding-right: calc(50% - $screenWidth / 2);
+}
+
+.top {
+    position: relative;
+    overflow: hidden;
+}
+
+%styleText {
+    font-style: normal;
+    line-height: normal;
+}
+
+summary::marker {
+    content: "";
+}
+
+summary {
+    display: block;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .header__link-site {
+        display: none;
+    }
+
+    .header__left {
+        padding-left: 16px;
+    }
+
+    .header__right {
+        padding-right: 16px;
+    }
+
+    .promo__img {
+        display: none;
+    }
+
+    .promo {
+        display: block;
+    }
+
+    .promo__title {
+        font-size: 38px;
+        line-height: normal;
+    }
+
+    .promo__heading {
+        font-size: 20px;
+        line-height: normal;
+    }
+
+    .promo__fashion {
+        font-size: 20px;
+        line-height: normal;
+    }
+
+    .promo__content {
+        min-height: 66px;
+        padding-top: 18px;
+        padding-bottom: 149px;
+        max-width: 263px;
+        margin-left: 15%;
+        margin-right: 15%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .sale {
+        @include centerFlex;
+        flex-direction: column;
+        gap: 32px;
+        padding-bottom: 64px;
+    }
+
+    .sibig {
+        display: none;
+    }
+
+    .sibig-m {
+        display: block;
+    }
+
+    .sale__item-big {
+        min-height: 111px;
+        max-width: 360px;
+    }
+
+    .product-box {
+        padding-bottom: 40px;
+    }
+
+    .button {
+        margin-top: 40px;
+        margin-bottom: 85px;
+    }
+
+    .footer {
+
+        &__featurebox {
+            padding-top: 48px;
+            padding-bottom: 81px;
+            flex-direction: column;
+            gap: 47px;
+        }
+
+        &__subscribebox {
+            padding-top: 64px;
+            padding-bottom: 110px;
+            flex-direction: column;
+            gap: 59px;
+        }
+
+        &__subscribe {
+            padding-right: 0;
+        }
+
+        &__copyrightbox {
+            padding-top: 43px;
+            padding-bottom: 9px;
+            flex-direction: column-reverse;
+            gap: 40px;
+        }
+    }
+}

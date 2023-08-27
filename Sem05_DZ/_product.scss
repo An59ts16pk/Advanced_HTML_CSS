@@ -1,0 +1,146 @@
+@import 'vars';
+@import 'mixins';
+@import 'tophead';
+
+.gallerybox {
+    min-height: 776px;
+    background: #F7F7F7;
+
+    &__img {
+        padding-top: 11px;
+        padding-bottom: 42px;
+        @include centerFlex;
+    }
+
+    &__link {
+        position: relative;
+        top: 400px;
+        @include spacebetweenFlex;
+        flex-direction: row;
+    }
+
+    &__link-icon {
+        width: 47px;
+        height: 47px;
+        background-color: rgba(42, 42, 42, 0.15);
+        @include centerFlex;
+
+        & path {
+            transition: fill 0.3s;
+        }
+
+        &:hover path {
+            fill: $colorDesign;
+        }
+    }
+}
+
+.productinfo {
+    &__content {
+        position: relative;
+        top: -60px;
+        z-index: 1;
+        background: white;
+        min-height: 600px;
+        max-width: 1140px;
+        margin-bottom: 130px;
+        border: 1px solid #F7F7F7;
+        @include centerFlex;
+        flex-direction: column;
+    }
+
+    &__subtitle {
+        padding-top: 64px;
+        padding-bottom: 12px;
+        color: $colorDesign;
+        font-size: 0.875rem;
+        @extend %styleText;
+        font-weight: 300;
+    }
+
+    &__title {
+        padding-top: 12px;
+        padding-bottom: 48px;
+        color: #4D4D4D;
+        font-size: 1.125rem;
+        @extend %styleText;
+        font-weight: 300;
+    }
+
+    &__text {
+        max-width: 555px;
+        min-height: 52px;
+        color: #5E5E5E;
+        text-align: center;
+        font-size: 0.875rem;
+        @extend %styleText;
+        font-weight: 300;
+    }
+
+    &__price {
+        padding-top: 32px;
+        padding-bottom: 65px;
+        color: #EF5B70;
+        font-size: 1.5rem;
+        @extend %styleText;
+        font-weight: 300;
+    }
+
+    &__sort {
+        padding-top: 65px;
+        padding-bottom: 48px;
+        display: flex;
+        align-items: center;
+        gap: 23px;
+    }
+
+    &__sort-summary {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        color: #6F6E6E;
+        font-size: 0.875rem;
+        @extend %styleText;
+        font-weight: 400;
+    }
+
+    &__button {
+        margin-bottom: 65px;
+    }
+
+    &__button-link {
+        width: 212px;
+        min-height: 48px;
+        border: 1px solid #FF6A6A;
+        color: #F26376;
+        font-size: 1rem;
+        @extend %styleText;
+        font-weight: 400;
+        @include centerFlex;
+        gap: 23px;
+        transition: all 0.6s;
+
+        & path {
+            transition: fill 0.6s;
+        }
+
+        &:hover {
+            color: white;
+            background-color: $colorDesign;
+        }
+
+        &:hover path {
+            fill: white;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1139px) {
+
+    .product {
+
+        &__third {
+            display: none;
+        }
+    }
+}

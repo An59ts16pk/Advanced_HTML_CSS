@@ -1,0 +1,26 @@
+@import 'vars';
+@import 'mixins';
+
+.tophead {
+    background: #F8F3F4;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include spacebetweenFlex;
+
+    &__heading {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 29px;
+        color: $colorDesign;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1140px) {
+
+    .tophead {
+        &__heading {
+            padding-left: 16px;
+        }
+    }
+}

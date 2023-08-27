@@ -1,0 +1,154 @@
+@import 'vars';
+@import 'mixins';
+
+.filter-sort {
+    height: 60px;
+    padding-top: 39px;
+    block-size: border-box;
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+
+// --- filter ---
+.filter {
+    width: 360px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 10;
+
+    &__details {
+        padding-top: 13px;
+    }
+
+    &__details[open] {
+        background: #FFFFFF;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    }
+
+    &__details[open] .filter__heading {
+        color: $colorCatalogDesign;
+    }
+
+    &__details[open] path {
+        fill: $colorCatalogDesign;
+    }
+
+    &__details[open] .filter__summary {
+        padding-left: 16px;
+    }
+
+    &__summary {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        padding-bottom: 16px;
+    }
+
+    &__content {
+        padding-right: 16px;
+    }
+
+    &__item {
+        padding-left: 16px;
+        padding-bottom: 16px;
+    }
+
+    &__item[open] .filter__head {
+        color: $colorCatalogDesign;
+    }
+
+    &__heading {
+        color: #000;
+        font-size: 14px;
+        @extend %styleText;
+        font-weight: 600;
+    }
+
+    &__head {
+        color: $colorCatalogText;
+        font-size: 14px;
+        @extend %styleText;
+        font-weight: 400;
+        padding: 8px 11px 11px 11px;
+        border-bottom: 1px solid #EBEBEB;
+        border-left: 5px solid $colorCatalogDesign;
+    }
+
+    &__link-box {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        padding: 24px 16px;
+    }
+
+    &__link {
+        color: $colorCatalogText;
+        font-size: 14px;
+        @extend %styleText;
+        font-weight: 400;
+
+        &:hover {
+            color: $colorCatalogDesign;
+        }
+    }
+}
+
+// --- sort ---
+.sort {
+    padding-top: 12px;
+    display: flex;
+    gap: 18px;
+
+    &__details {
+        position: relative;
+    }
+
+    &__summary {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__check {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        color: $colorCatalogText;
+        font-size: 14px;
+        @extend %styleText;
+        font-weight: 400;
+    }
+
+    &__heading {
+        color: #6F6E6E;
+        font-size: 14px;
+        @extend %styleText;
+        font-weight: 400;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background: #FFF;
+        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+        padding: 7px 30px 11px 9px;
+        position: absolute;
+        z-index: 1;
+        left: -9px;
+        top: 22px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1140px) {
+
+    .filter-sort {
+        padding-top: 24px;
+        gap: 112px;
+    }
+
+    .filter {
+        padding-left: 16px;
+    }
+}
