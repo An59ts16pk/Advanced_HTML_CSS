@@ -1,0 +1,60 @@
+@import 'vars';
+@import 'mixins';
+@import 'header_and_footer';
+@import 'filter_and_sort';
+@import 'breadcrumbs';
+@import 'tophead';
+@import 'index';
+@import 'allproducts';
+@import 'cart';
+@import 'product';
+@import 'catalog';
+@import 'registration';
+
+html {
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.center {
+    padding-left: calc(50% - $screenWidth / 2);
+    padding-right: calc(50% - $screenWidth / 2);
+}
+
+.top {
+    position: relative;
+    overflow: hidden;
+}
+
+%styleText {
+    font-style: normal;
+    line-height: normal;
+}
+
+summary::marker {
+    content: "";
+}
+
+summary {
+    display: block;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}

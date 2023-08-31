@@ -1,0 +1,146 @@
+@import 'vars';
+@import 'mixins';
+
+.product-box {
+    padding-bottom: 48px;
+
+    &__margin {
+        margin-bottom: 128px;
+    }
+
+    &__heading {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.875rem;
+        line-height: 36px;
+        text-align: center;
+        color: #222222;
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.875rem;
+        line-height: 17px;
+        text-align: center;
+        margin-top: 6px;
+        color: #9F9F9F;
+    }
+
+    &__content {
+        margin-top: 48px;
+        display: -ms-grid;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 360px);
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+.product {
+    position: relative;
+
+    &:hover .product__img {
+        -webkit-filter: brightness(0.5);
+        filter: brightness(0.5);
+    }
+
+    &:hover .product__add {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__add {
+        position: absolute;
+        top: 188px;
+        left: 111px;
+        border: 1px solid #fff;
+        width: 139px;
+        height: 44px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 0.875rem;
+        line-height: 17px;
+        display: none;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 11px;
+        color: #FFFFFF;
+    }
+
+    &__add:hover {
+        -webkit-box-shadow: 0 0 5px #fff;
+        box-shadow: 0 0 5px #fff;
+    }
+
+    &__add:hover svg path {
+        fill: $colorDesign;
+    }
+
+    &__content {
+        background: #F8F8F8;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        padding: 24px 16px;
+        gap: 16px;
+    }
+
+    &__heading {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        color: #000000;
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 0.875rem;
+        line-height: 17px;
+        color: #5D5D5D;
+    }
+
+    &__price {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 19px;
+        color: $colorDesign;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .product-box {
+
+        &__content {
+            padding-left: 13px;
+            padding-right: 13px;
+            margin-top: 28px;
+            gap: 16px;
+        }
+    }
+}
